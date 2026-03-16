@@ -84,6 +84,20 @@
   margin-bottom: 1.1rem;
 }
 
+.training-center-logo-link {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.training-center-logo {
+  width: clamp(80px, 11vw, 140px);
+  height: auto;
+  display: block;
+}
+
 .training-list {
   margin: 0.75rem 0 1.5rem;
   padding-left: 1.25rem;
@@ -247,6 +261,14 @@ input:focus {
   .card {
     width: 100%;
     padding: 1.25rem;
+  }
+
+  .training-center-logo-link {
+    top: 1.35rem;
+  }
+
+  .training-center-logo {
+    width: clamp(65px, 20vw, 105px);
   }
 
   .form-row {

@@ -303,6 +303,19 @@ function App() {
     return (
       <main className="layout">
         <section className="card">
+          <a
+            className="training-center-logo-link"
+            href="https://www.bavaria.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ir al sitio web de Bavaria"
+          >
+            <img
+              className="training-center-logo"
+              src="/img/Logo_new.png"
+              alt="Logo Bavaria"
+            />
+          </a>
           <div
             key={transitionKey}
             ref={sectionWrapperRef}
