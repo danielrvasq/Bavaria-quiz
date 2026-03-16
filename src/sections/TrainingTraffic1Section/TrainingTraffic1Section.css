@@ -1,0 +1,31 @@
+.training-epp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+}
+
+.training-epp-section p {
+  font-weight: bold;
+}
+
+.training-epp-section__list {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.training-epp-section .actions {
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  padding-top: 0.75rem;
+  background: var(--bg-surface);
+  z-index: 1;
+}

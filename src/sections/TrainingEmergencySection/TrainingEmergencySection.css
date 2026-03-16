@@ -1,0 +1,26 @@
+.training-emergency-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+}
+
+.training-emergency-section__list {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.training-emergency-section p {
+  font-weight: bold;
+  line-height: 2;
+}
+
+.training-emergency-section .actions {
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  padding-top: 0.75rem;
+  background: var(--bg-surface);
+  z-index: 1;
+}
