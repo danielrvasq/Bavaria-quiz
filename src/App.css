@@ -6,32 +6,54 @@
   justify-content: center;
   padding: 1.25rem;
   background:
-    linear-gradient(120deg, rgba(240, 150, 36, 0.12), rgba(224, 32, 44, 0.08) 34%, rgba(24, 147, 174, 0.12)),
+    linear-gradient(
+      120deg,
+      rgba(240, 150, 36, 0.12),
+      rgba(224, 32, 44, 0.08) 34%,
+      rgba(24, 147, 174, 0.12)
+    ),
     var(--bg-page);
 }
 
 .card {
   position: relative;
   width: 70%;
+  height: calc(100vh - 2.5rem);
   background: var(--bg-surface);
   border-radius: 1rem;
   border: 1px solid var(--border-soft);
   padding: 1.75rem 2rem;
   box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0 0 auto 0;
   height: 8px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-orange), var(--color-cyan));
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-orange),
+    var(--color-cyan)
+  );
 }
 
 .section-transition-wrapper {
+  flex: 1;
+  min-height: 0;
   width: 100%;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   will-change: transform, opacity;
+}
+
+.section-transition-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .card h1 {
@@ -115,7 +137,9 @@ input:focus {
   border: 1px solid;
   cursor: pointer;
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .primary {
@@ -172,7 +196,9 @@ input:focus {
   padding: 0.65rem 0.8rem;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .option-btn:hover {
@@ -219,6 +245,7 @@ input:focus {
 
 @media (max-width: 720px) {
   .card {
+    width: 100%;
     padding: 1.25rem;
   }
 

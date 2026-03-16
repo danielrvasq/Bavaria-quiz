@@ -125,8 +125,7 @@ function App() {
 
     let offset = 18;
     if (step === "training") {
-      offset =
-        preQuizSection >= previousTrainingSectionRef.current ? 24 : -24;
+      offset = preQuizSection >= previousTrainingSectionRef.current ? 24 : -24;
     }
 
     const sectionAnimation = animate(element, {
@@ -361,7 +360,9 @@ function App() {
                               type="button"
                               className={
                                 "option-btn" +
-                                (selected === key ? " option-btn--selected" : "")
+                                (selected === key
+                                  ? " option-btn--selected"
+                                  : "")
                               }
                               onClick={() => handleSelectOption(q.id, key)}
                             >
@@ -436,11 +437,7 @@ function App() {
           </ol>
 
           <div className="actions">
-            <button
-              type="button"
-              className="secondary"
-              onClick={handleRestart}
-            >
+            <button type="button" className="secondary" onClick={handleRestart}>
               Volver al inicio
             </button>
           </div>
