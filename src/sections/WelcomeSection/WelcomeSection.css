@@ -65,16 +65,40 @@
 @media (max-width: 768px) {
   .welcome-section {
     width: 100%;
-    max-height: none;
+    height: 85vh;
+    max-height: 85vh;
+    aspect-ratio: auto;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
   }
 
   .welcome-section__overlay {
     justify-content: flex-end;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 1.25rem;
+    background: linear-gradient(
+      180deg,
+      rgba(29, 92, 117, 0.2) 0%,
+      rgba(29, 92, 117, 0.74) 62%,
+      rgba(224, 32, 44, 0.28) 100%
+    );
   }
 
   .welcome-section__content {
     max-width: 100%;
+  }
+
+  .welcome-section__content h1 {
+    font-size: clamp(1.35rem, 6vw, 1.9rem);
+  }
+
+  .welcome-section__actions {
+    width: 100%;
+  }
+
+  .welcome-section__actions .primary {
+    width: 100%;
+    min-width: 0;
   }
 }

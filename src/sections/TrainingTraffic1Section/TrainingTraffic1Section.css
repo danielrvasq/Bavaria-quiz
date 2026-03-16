@@ -15,17 +15,18 @@
   line-height: 1.6;
 }
 
-.videos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 .training-epp-section .actions {
   margin-top: auto;
   position: sticky;
   bottom: 0;
   padding-top: 0.75rem;
   background: var(--bg-surface);
+  border-top: 1px solid var(--border-soft);
   z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .training-epp-section p {
+    line-height: 1.6;
+  }
 }

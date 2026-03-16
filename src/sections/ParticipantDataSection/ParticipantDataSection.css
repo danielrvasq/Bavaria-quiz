@@ -30,11 +30,16 @@
   bottom: 0;
   padding-top: 0.75rem;
   background: var(--bg-surface);
+  border-top: 1px solid var(--border-soft);
   z-index: 1;
 }
 
 @media (max-width: 720px) {
   .participant-data-section__row {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .participant-data-section {
+    gap: 0.85rem;
   }
 }

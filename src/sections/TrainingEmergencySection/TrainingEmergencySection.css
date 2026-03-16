@@ -22,5 +22,12 @@
   bottom: 0;
   padding-top: 0.75rem;
   background: var(--bg-surface);
+  border-top: 1px solid var(--border-soft);
   z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .training-emergency-section p {
+    line-height: 1.6;
+  }
 }

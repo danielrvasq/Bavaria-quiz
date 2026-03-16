@@ -4,7 +4,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  padding: 1.25rem;
+  padding: clamp(0.75rem, 2.2vw, 1.25rem);
   background:
     linear-gradient(
       120deg,
@@ -17,8 +17,9 @@
 
 .card {
   position: relative;
-  width: 70%;
+  width: min(1100px, 100%);
   height: calc(100vh - 2.5rem);
+  height: calc(100dvh - 2.5rem);
   background: var(--bg-surface);
   border-radius: 1rem;
   border: 1px solid var(--border-soft);
@@ -56,6 +57,27 @@
   display: none;
 }
 
+.card--training .section-transition-wrapper {
+  padding-top: 2.4rem;
+}
+
+.videos {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.videos img,
+.videos video {
+  flex: 1 1 320px;
+  width: min(100%, 520px);
+  max-width: 100%;
+  border-radius: 0.85rem;
+  object-fit: cover;
+}
+
 .card h1 {
   margin-top: 0;
   margin-bottom: 0.85rem;
@@ -86,7 +108,7 @@
 
 .training-center-logo-link {
   position: absolute;
-  top: 1.2rem;
+  top: 0.95rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -258,13 +280,23 @@ input:focus {
 }
 
 @media (max-width: 720px) {
+  .section-indicator {
+    display: none;
+  }
+
   .card {
     width: 100%;
+    height: calc(100vh - 1.5rem);
+    height: calc(100dvh - 1.5rem);
     padding: 1.25rem;
   }
 
+  .card--training .section-transition-wrapper {
+    padding-top: 2.2rem;
+  }
+
   .training-center-logo-link {
-    top: 1.35rem;
+    top: 0.85rem;
   }
 
   .training-center-logo {
@@ -281,7 +313,27 @@ input:focus {
 
   .actions,
   .actions--between {
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+  }
+
+  .actions .primary,
+  .actions .secondary {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: min(920px, 100%);
+  }
+
+  .videos {
+    flex-direction: column;
+    align-items: center;
   }
 }

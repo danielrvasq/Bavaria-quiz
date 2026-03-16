@@ -302,7 +302,7 @@ function App() {
 
     return (
       <main className="layout">
-        <section className="card">
+        <section className="card card--training">
           <a
             className="training-center-logo-link"
             href="https://www.bavaria.co/"
